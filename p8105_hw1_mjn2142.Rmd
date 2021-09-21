@@ -10,13 +10,19 @@ output: github_document
 
 ##Data Frame
 
-# install.package("tidyverse)
 library(tidyverse)
 
-tibble(
+p1_df = tibble(
     ran_samp = rnorm(10),
     vec_logical = ran_samp > 0,
     vec_char = c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J"),
     vec_fac = factor(c("yellow", "blue", "red", "yellow", "blue", "red", "yellow", "blue", "red", "yellow"))
 )
+
+##Means of Data Frame Variables
+
+mean(p1_df %>% pull(ran_samp))
+mean(p1_df %>% pull(vec_logical))
+mean(p1_df %>% pull(vec_char))
+mean(p1_df %>% pull(vec_fac))
 
