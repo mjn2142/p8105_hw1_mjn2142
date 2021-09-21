@@ -26,3 +26,4 @@ mean(p1_df %>% pull(vec_logical))
 mean(p1_df %>% pull(vec_char))
 mean(p1_df %>% pull(vec_fac))
 
+#Mean can only be taken for ran_samp and vec_logical, not vec_char or vec_fac
