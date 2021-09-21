@@ -4,3 +4,19 @@ author: "Matthew Neky"
 date: "9/21/2021"
 output: github_document
 ---
+
+###Problem 1
+
+
+##Data Frame
+
+# install.package("tidyverse)
+library(tidyverse)
+
+tibble(
+    ran_samp = rnorm(10),
+    vec_logical = ran_samp > 0,
+    vec_char = c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J"),
+    vec_fac = factor(c("yellow", "blue", "red", "yellow", "blue", "red", "yellow", "blue", "red", "yellow"))
+)
+
