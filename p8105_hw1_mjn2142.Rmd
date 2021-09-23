@@ -51,7 +51,7 @@ mean(penguins$flipper_length_mm, na.rm = TRUE)
 ##Scatterplot
 
 ```{r}
-ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm)) + geom_point()
+peng_plot = ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 ```
 
 
