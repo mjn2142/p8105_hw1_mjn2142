@@ -34,7 +34,7 @@ mean(p1_df %>% pull(vec_char))
 mean(p1_df %>% pull(vec_fac))
 ```
 
-#Mean can only be taken for ran_samp and vec_logical, not vec_char or vec_fac
+#Mean can only be taken for ran_samp and vec_logical because they have numeric values associated with them, not vec_char or vec_fac which only have characters associated with them.
 
 ###Problem 2
 
@@ -46,5 +46,11 @@ nrow(penguins)
 ncol(penguins)
 
 mean(penguins$flipper_length_mm, na.rm = TRUE)
+```
+
+##Scatterplot
+
+```{r}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm)) + geom_point()
 ```
 
