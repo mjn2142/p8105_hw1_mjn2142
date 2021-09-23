@@ -9,9 +9,11 @@ output: github_document
 
 
 ##Data Frame
-
+```{r}
 library(tidyverse)
+```
 
+```{r}
 p1_df = tibble(
     ran_samp = rnorm(10),
     vec_logical = ran_samp > 0,
@@ -19,11 +21,30 @@ p1_df = tibble(
     vec_fac = factor(c("yellow", "blue", "red", "yellow", "blue", "red", "yellow", "blue", "red", "yellow"))
 )
 
+knitr::kable(p1_df, format = "html")
+
 ##Means of Data Frame Variables
 
 mean(p1_df %>% pull(ran_samp))
+
 mean(p1_df %>% pull(vec_logical))
+
 mean(p1_df %>% pull(vec_char))
+
 mean(p1_df %>% pull(vec_fac))
+```
 
 #Mean can only be taken for ran_samp and vec_logical, not vec_char or vec_fac
+
+###Problem 2
+
+```{r}
+data("penguins", package = "palmerpenguins")
+
+summary(penguins)
+nrow(penguins)
+ncol(penguins)
+
+mean(penguins$flipper_length_mm, na.rm = TRUE)
+```
+
