@@ -50,7 +50,7 @@ mean(penguins$flipper_length_mm, na.rm = TRUE)
 
 ##Scatterplot
 
-```{r, message = FALSE, warning = FALSE, fig.show = TRUE}
+```{r, message = FALSE, warning = FALSE}
 peng_plot = ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 ggsave("peng_plot.png")
 ```
