@@ -38,6 +38,8 @@ mean(p1_df %>% pull(vec_fac))
 
 ###Problem 2
 
+##Basic Penguins Data Info
+
 ```{r}
 data("penguins", package = "palmerpenguins")
 
@@ -48,7 +50,7 @@ ncol(penguins)
 mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```
 
-##Scatterplot
+##Scatterplot of Flipper Length vs. Bill Length
 
 ```{r, message = FALSE, warning = FALSE}
 peng_plot = ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
