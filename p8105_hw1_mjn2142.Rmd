@@ -53,7 +53,7 @@ mean(penguins$flipper_length_mm, na.rm = TRUE)
 ```{r, message = FALSE, warning = FALSE}
 peng_plot = ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 ggsave("peng_plot.png")
-knitr::fig_chunk('peng_plot', 'png')
+knitr::include_graphics("peng_plot.png")
 ```
 
 
