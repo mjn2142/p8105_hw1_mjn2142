@@ -44,6 +44,12 @@ mean(p1_df %>% pull(vec_fac))
 data("penguins", package = "palmerpenguins")
 
 print(penguins)
+names(penguins)
+dim(penguins)
+median(penguins$body_mass_g, na.rm = TRUE)
+max(penguins$bill_length_mm, na.rm = TRUE)
+min(penguins$bill_length_mm, na.rm = TRUE)
+
 nrow(penguins)
 ncol(penguins)
 
