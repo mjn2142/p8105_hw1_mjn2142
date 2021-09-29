@@ -43,7 +43,7 @@ mean(p1_df %>% pull(vec_fac))
 ```{r}
 data("penguins", package = "palmerpenguins")
 
-summary(penguins)
+print(penguins)
 nrow(penguins)
 ncol(penguins)
 
